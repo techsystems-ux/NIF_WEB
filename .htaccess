@@ -1,0 +1,92 @@
+# ══════════════════════════════════════════════════
+#  NIF Global Kondhwa – .htaccess
+# ══════════════════════════════════════════════════
+
+# Optional: only keep this if you really want slashless directory URLs
+DirectorySlash Off
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Redirect HTTP to HTTPS first
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # Strict redirect for explicit index.html
+  RewriteCond %{THE_REQUEST} \s/fashiondesign/index\.html[\s?]
+  RewriteRule ^fashiondesign/index\.html$ /fashiondesign [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/interiordesign/index\.html[\s?]
+  RewriteRule ^interiordesign/index\.html$ /interiordesign [R=301,L]
+
+  # Serve section homepages without slash
+  RewriteRule ^fashiondesign/?$ /fashiondesign/index.html [L]
+  RewriteRule ^interiordesign/?$ /interiordesign/index.html [L]
+
+  # Clean URL: /fashiondesign/thank-you → /fashiondesign/thank-you.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^fashiondesign/([A-Za-z0-9_-]+)/?$ /fashiondesign/$1.html [L]
+
+  # Clean URL: /interiordesign/thank-you → /interiordesign/thank-you.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^interiordesign/([A-Za-z0-9_-]+)/?$ /interiordesign/$1.html [L]
+
+  # Remove trailing slash from non-directories
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} ^(.+)/$
+  RewriteRule ^ %1 [R=301,L]
+
+  # Block repeated /blogs/ loops immediately
+  RewriteCond %{REQUEST_URI} (.+/blogs/){2,}
+  RewriteRule ^ - [R=404,L]
+
+  # 301 redirects from old blog slugs to new SEO slugs
+  RewriteRule ^blogs/blog-4/?$ /blogs/fashion-designing-course-pune-after-12th/ [R=301,L]
+  RewriteRule ^blogs/blog-5/?$ /blogs/interior-designing-course-pune-fees-scope-colleges/ [R=301,L]
+  RewriteRule ^blogs/blog-6/?$ /blogs/fashion-designing-course-pune-fees-duration-eligibility/ [R=301,L]
+  RewriteRule ^blogs/blog-7/?$ /blogs/interior-designing-course-pune-after-10th-12th/ [R=301,L]
+  RewriteRule ^blogs/blog-8/?$ /blogs/choose-fashion-designing-course-pune/ [R=301,L]
+
+  # Blogs index
+  RewriteRule ^blogs/?$ /blogs/index.html [L]
+
+  # Blog pages (only if not already rewritten to index.html)
+  RewriteCond %{REQUEST_URI} !index\.html$
+  RewriteRule ^blogs/([A-Za-z0-9_-]+)/?$ /blogs/$1/index.html [L]
+
+  # Root clean URLs: /contact -> /contact.html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^([A-Za-z0-9_-]+)/?$ /$1.html [L]
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html

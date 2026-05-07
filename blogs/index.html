@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQTC2VSD');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion &amp; Design Blogs, News &amp; Insights | NIF Global</title>
+    <meta name="description" content="Stay updated with the latest in fashion design, interior design &amp; industry events. Read expert articles, news &amp; stories from NIF Global Kondhwa, Pune." />
+    <meta property="og:title" content="Fashion &amp; Design Blogs, News &amp; Insights | NIF Global" />
+    <meta property="og:description" content="Stay updated with the latest in fashion design, interior design &amp; industry events. Read expert articles, news &amp; stories from NIF Global Kondhwa, Pune." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.nifkondhwa.com/blogs/" />
+    <meta property="og:image" content="https://www.nifkondhwa.com/images/about2.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fashion &amp; Design Blogs, News &amp; Insights | NIF Global" />
+    <meta name="twitter:description" content="Stay updated with the latest in fashion design, interior design &amp; industry events. Read expert articles, news &amp; stories from NIF Global Kondhwa, Pune." />
+    <meta name="twitter:image" content="https://www.nifkondhwa.com/images/about2.webp" />
+    <link rel="canonical" href="https://www.nifkondhwa.com/blogs/" />
+    <link rel="icon" href="/images/nif_favicon.webp" type="image/webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blogs-hero {
+            background: linear-gradient(135deg, #5a1a0a 0%, #7d2310 60%, #943118 100%);
+            padding: 80px 24px 60px;
+            text-align: center;
+            color: #fff;
+        }
+        .blogs-hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: -.02em;
+        }
+        .blogs-hero p {
+            font-size: 15px;
+            color: rgba(255,255,255,.8);
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+        .blogs-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 64px 24px 80px;
+        }
+        .blog-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,.07);
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow .25s, transform .25s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .blog-card:hover {
+            box-shadow: 0 12px 40px rgba(0,0,0,.13);
+            transform: translateY(-4px);
+        }
+        .blog-card-img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+        .blog-card-body {
+            padding: 26px 28px 30px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .blog-card-tag {
+            display: inline-block;
+            background: #fdf0ec;
+            color: #9A2A12;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 14px;
+            align-self: flex-start;
+        }
+        .blog-card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #111;
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+        .blog-card-excerpt {
+            font-size: 13.5px;
+            color: #666;
+            line-height: 1.75;
+            flex: 1;
+            margin-bottom: 22px;
+        }
+        .blog-card-meta {
+            font-size: 12px;
+            color: #aaa;
+            display: flex;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+        .blog-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #9A2A12;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-bottom: 1.5px solid #9A2A12;
+            padding-bottom: 2px;
+            align-self: flex-start;
+            transition: opacity .2s;
+        }
+        .blog-card-link:hover { opacity: .7; }
+        .blogs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 36px;
+        }
+        @media (max-width: 900px) {
+            .blogs-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 580px) {
+            .blogs-grid { grid-template-columns: 1fr; }
+            .blogs-hero { padding: 50px 16px 40px; }
+            .blogs-section { padding: 36px 16px 60px; }
+            .blog-card-title { font-size: 17px; }
+            .blog-card-excerpt { font-size: 13px; }
+        }
+    </style>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQTC2VSD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <!-- ══ HEADER (shared partial) ══ -->
+    <div id="site-header"></div>
+    <script src="/partials/header.js"></script>
+
+    <!-- ═══════════════════ BLOGS HERO ═══════════════════ -->
+    <div class="blogs-hero">
+        <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px;">
+            <div style="width:40px;height:1px;background:rgba(255,255,255,.4);"></div>
+            <span style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);">Our Blogs</span>
+            <div style="width:40px;height:1px;background:rgba(255,255,255,.4);"></div>
+        </div>
+        <h1>Latest Articles &amp; Blog</h1>
+        <p>Learn, explore, and stay inspired with expert-written articles on fashion, design education, and industry events.</p>
+    </div>
+
+    <!-- ═══════════════════ BLOGS GRID ═══════════════════ -->
+    <div class="blogs-section">
+        <div class="blogs-grid">
+
+            <!-- Blog Card 1 -->
+            <div class="blog-card">
+                <img class="blog-card-img" src="/images/shinde sir and pandey.webp" alt="Ananya Panday Launches NIF Global" width="683" height="620" loading="lazy" />
+                <div class="blog-card-body">
+                    <span class="blog-card-tag">Fashion &amp; Events</span>
+                    <h2 class="blog-card-title">Ananya Panday Launches NIF Global In India</h2>
+                    <div class="blog-card-meta">
+                        <span><i class="fa-regular fa-calendar" style="margin-right:5px;"></i>November 13, 2024</span>
+                        <span><i class="fa-regular fa-clock" style="margin-right:5px;"></i>5 min read</span>
+                    </div>
+                    <p class="blog-card-excerpt">Bollywood superstar and Style icon Ananya Panday launched the New York Institute of Fashion (NIF Global) in India at NCPA, Mumbai, inspiring students through an exclusive master session.</p>
+                    <a href="/blogs/blog-1/" class="blog-card-link">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Card 2 -->
+            <div class="blog-card">
+                <img class="blog-card-img" src="/images/Hero Section/img5.webp" alt="NIF Kondhwa X New York Fashion Week"
+                    width="1039" height="1600" loading="lazy" style="object-position:top;" />
+                <div class="blog-card-body">
+                    <span class="blog-card-tag">Fashion Week</span>
+                    <h2 class="blog-card-title">NIF Global Kondhwa, Pune @ New York Fashion Week</h2>
+                    <div class="blog-card-meta">
+                        <span><i class="fa-regular fa-calendar" style="margin-right:5px;"></i>March 5, 2025</span>
+                        <span><i class="fa-regular fa-clock" style="margin-right:5px;"></i>4 min read</span>
+                    </div>
+                    <p class="blog-card-excerpt">Our students had the remarkable opportunity to present their designs on the prestigious international stage of New York Fashion Week, one of the world's most influential fashion events.</p>
+                    <a href="/blogs/blog-2/" class="blog-card-link">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="blog-card">
+                <img class="blog-card-img" src="/images/Mr. Anil Shinde (1).webp"
+                    alt="Mr. Anil Shinde Featured in ET Inspiring Men & Women" width="414" height="472" loading="lazy" />
+                <div class="blog-card-body">
+                    <span class="blog-card-tag">Recognition</span>
+                    <h2 class="blog-card-title">Mr. Anil Shinde Featured in ET Inspiring Men &amp; Women</h2>
+                    <div class="blog-card-meta">
+                        <span><i class="fa-regular fa-calendar" style="margin-right:5px;"></i>February 20, 2025</span>
+                        <span><i class="fa-regular fa-clock" style="margin-right:5px;"></i>4 min read</span>
+                    </div>
+                    <p class="blog-card-excerpt">Mr. Anil Shinde, Centre Director of NIF Global Kondhwa, has been featured in the prestigious ET Inspiring Men &amp; Women edition for his dedication to fashion and design education.</p>
+                    <a href="/blogs/blog-3/" class="blog-card-link">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Card 4 -->
+            <div class="blog-card">
+                <img class="blog-card-img" src="/images/Hero Section/SC/img1.webp"
+                    alt="Fashion design sketch by NIF Global student" width="940" height="1280" loading="lazy" />
+                <div class="blog-card-body">
+                    <span class="blog-card-tag">Fashion Education</span>
+                    <h2 class="blog-card-title">After 12th: How to Start a Fashion Designing Course in Pune</h2>
+                    <div class="blog-card-meta">
+                        <span><i class="fa-regular fa-calendar" style="margin-right:5px;"></i>April 30, 2026</span>
+                        <span><i class="fa-regular fa-clock" style="margin-right:5px;"></i>8 min read</span>
+                    </div>
+                    <p class="blog-card-excerpt">Just finished Class 12? Discover how to enroll in a fashion designing course in Pune, what programs suit you, and where your design career can go from here.</p>
+                    <a href="/blogs/fashion-designing-course-pune-after-12th/" class="blog-card-link">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Card 5 -->
+            <div class="blog-card">
+                <img class="blog-card-img" src="/images/about2.webp"
+                    alt="NIF Global students presenting an interior design model" width="600" height="375" loading="lazy" />
+                <div class="blog-card-body">
+                    <span class="blog-card-tag">Interior Design</span>
+                    <h2 class="blog-card-title">Complete Guide to Interior Designing Course in Pune</h2>
+                    <div class="blog-card-meta">
+                        <span><i class="fa-regular fa-calendar" style="margin-right:5px;"></i>April 30, 2026</span>
+                        <span><i class="fa-regular fa-clock" style="margin-right:5px;"></i>9 min read</span>
+                    </div>
+                    <p class="blog-card-excerpt">Explore interior designing course in Pune: fees, career scope, what to study, and how to choose the right interior design college for your goals.</p>
+                    <a href="/blogs/interior-designing-course-pune-fees-scope-colleges/" class="blog-card-link">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Card 6 -->
+            <div class="blog-card">
+                <img class="blog-card-img" src="/images/Hero Section/SC/IMG_0143.JPG.webp"
+                    alt="Fashion design student working on a sewing machine" width="540" height="640" loading="lazy" />
+                <div class="blog-card-body">
+                    <span class="blog-card-tag">Fashion Education</span>
+                    <h2 class="blog-card-title">Fashion Designing Course in Pune: Fees, Duration &amp; Eligibility</h2>
+                    <div class="blog-card-meta">
+                        <span><i class="fa-regular fa-calendar" style="margin-right:5px;"></i>April 30, 2026</span>
+                        <span><i class="fa-regular fa-clock" style="margin-right:5px;"></i>9 min read</span>
+                    </div>
+                    <p class="blog-card-excerpt">Wondering about fees, duration, and eligibility for a fashion designing course in Pune? Here is everything you need to know before you enroll.</p>
+                    <a href="/blogs/fashion-designing-course-pune-fees-duration-eligibility/" class="blog-card-link">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Card 7 -->
+            <div class="blog-card">
+                <img class="blog-card-img" src="/images/Group Photo.webp"
+                    alt="NIF Global students at convocation" width="600" height="375" loading="lazy" />
+                <div class="blog-card-body">
+                    <span class="blog-card-tag">Interior Design</span>
+                    <h2 class="blog-card-title">Interior Designing Course in Pune After 10th &amp; 12th</h2>
+                    <div class="blog-card-meta">
+                        <span><i class="fa-regular fa-calendar" style="margin-right:5px;"></i>April 30, 2026</span>
+                        <span><i class="fa-regular fa-clock" style="margin-right:5px;"></i>9 min read</span>
+                    </div>
+                    <p class="blog-card-excerpt">Confused about which interior designing course in Pune suits you after 10th or 12th? This guide breaks down your options, eligibility, and career paths clearly.</p>
+                    <a href="/blogs/interior-designing-course-pune-after-10th-12th/" class="blog-card-link">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Card 8 -->
+            <div class="blog-card">
+                <img class="blog-card-img" src="/images/Hero Section/SC/product design.webp"
+                    alt="Fashion designers collaborating in a studio" width="1000" height="1200" loading="lazy" />
+                <div class="blog-card-body">
+                    <span class="blog-card-tag">Fashion Education</span>
+                    <h2 class="blog-card-title">How to Choose a Fashion Designing Course in Pune</h2>
+                    <div class="blog-card-meta">
+                        <span><i class="fa-regular fa-calendar" style="margin-right:5px;"></i>April 30, 2026</span>
+                        <span><i class="fa-regular fa-clock" style="margin-right:5px;"></i>9 min read</span>
+                    </div>
+                    <p class="blog-card-excerpt">A practical guide to choosing the right fashion designing course in Pune, from curriculum and faculty to placements and red flags to watch out for.</p>
+                    <a href="/blogs/choose-fashion-designing-course-pune/" class="blog-card-link">
+                        Read More
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ══ FOOTER (shared partial) ══ -->
+    <div id="site-footer"></div>
+    <script src="/partials/footer.js"></script>
+</body>
+</html>

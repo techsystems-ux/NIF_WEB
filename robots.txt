@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Allow: /fashiondesign
+Allow: /interiordesign
+Allow: /blogs/
+
+Disallow: /nifd test css exytraction/
+Disallow: /fashiondesign/thank-you
+Disallow: /interiordesign/thank-you
+Disallow: /blogs/blogs/
+
+Sitemap: https://www.nifkondhwa.com/sitemap.xml
