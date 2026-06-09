@@ -12,24 +12,34 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          timeout: 120000
-          local-dir: ./
-          server-dir: /public_html/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            **/node_modules/**
-            **/*.md
-            .gitignore
-            generate_city_pages.py
-            deploy-guide.html
-            *.zip
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Deploy via FTPS (lftp mirror with retries)
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          lftp -c "
+          set cmd:fail-exit true;
+          set ftp:ssl-force true;
+          set ftp:ssl-protect-data true;
+          set ssl:verify-certificate no;
+          set net:timeout 20;
+          set net:max-retries 5;
+          set net:reconnect-interval-base 5;
+          set net:reconnect-interval-multiplier 1;
+          set ftp:passive-mode true;
+          set mirror:parallel-transfer-count 2;
+          open -u \"$FTP_USERNAME\",\"$FTP_PASSWORD\" \"$FTP_SERVER\";
+          mirror --reverse --verbose --continue --no-perms \
+            --exclude '(^|/)\.git/' \
+            --exclude '(^|/)\.github/' \
+            --exclude '(^|/)\.gitignore$' \
+            --exclude '\.md$' \
+            --exclude '(^|/)generate_city_pages\.py$' \
+            --exclude '(^|/)deploy-guide\.html$' \
+            --exclude '\.zip$' \
+            ./ /public_html/;
+          "
