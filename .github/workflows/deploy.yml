@@ -21,7 +21,6 @@ jobs:
           protocol: ftps
           port: 21
           timeout: 120000
-          dangerous-clean-slate: true
           local-dir: ./
           server-dir: /public_html/
           exclude: |
