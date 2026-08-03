@@ -9,7 +9,3 @@ Thumbs.db
 # Original unslugified blog hero images kept at the repo root.
 # The deployed copies live in images/blogs/ with slugified names.
 /*.webp
-
-# Hero image for an article that is not published yet.
-# Remove this line when the article goes live.
-/images/blogs/Common Mistakes Students Make When Choosing an Interior Design College.webp
